@@ -20,7 +20,7 @@
 
 #include "aes256.h"
 
-uint8_t *cbc256(uint8_t in[], uint32_t length, const uint8_t key[32], uint8_t iv[16], uint8_t encrypt) {
+void cbc256(uint8_t in[], uint32_t length, const uint8_t key[32], uint8_t iv[16], uint8_t encrypt) {
     uint8_t *out = in;
     uint8_t nextIv[AES_BLOCK_SIZE];
     uint32_t expandedKey[EXPANDED_KEY_SIZE];
@@ -49,6 +49,4 @@ uint8_t *cbc256(uint8_t in[], uint32_t length, const uint8_t key[32], uint8_t iv
             memcpy(iv, nextIv, AES_BLOCK_SIZE);
         }
     }
-
-    return out;
 }
