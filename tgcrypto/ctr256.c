@@ -22,7 +22,7 @@
 
 #define MIN(a, b) (((a) < (b)) ? (a) : (b))
 
-void ctr256(uint8_t in[], uint32_t length, const uint8_t key[32], uint8_t iv[16], uint8_t *state) {
+void tgcrypto_ctr256(uint8_t in[], uint32_t length, const uint8_t key[32], uint8_t iv[16], uint8_t state[1]) {
     uint8_t *out = in;
     uint8_t chunk[AES_BLOCK_SIZE];
     uint32_t expandedKey[EXPANDED_KEY_SIZE];

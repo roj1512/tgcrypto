@@ -21,6 +21,6 @@
 #ifndef CTR256_H
 #define CTR256_H
 
-void ctr256(const uint8_t in[], uint32_t length, const uint8_t key[32], uint8_t iv[16], uint8_t *state);
+void tgcrypto_ctr256(uint8_t in[], uint32_t length, const uint8_t key[32], uint8_t iv[16], uint8_t state[1]);
 
 #endif  // CTR256_H
