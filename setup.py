@@ -74,7 +74,6 @@ setup(
                 "tgcrypto/tgcrypto.c",
                 "tgcrypto/aes256.c",
                 "tgcrypto/ige256.c",
-                "tgcrypto/cbc256.c"
             ]
         )
     ]
